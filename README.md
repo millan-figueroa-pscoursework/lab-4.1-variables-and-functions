@@ -55,6 +55,12 @@ After completing this activity, take a few minutes to reflect on the following:
 
 ### 1. How did you approach creating more flexible functions with parameters?
 
+Parameters make the functions generalized instead of static, so adding parameters makes it possible to use them with different variables.
+
 ### 2. What challenges did you face while incorporating conditional logic in your functions?
 
+Mostly the syntax using logic operators like || and &&
+
 ### 3. How does refactoring improve the readability and maintainability of your code?
+
+It improves readability by getting rid of unecessary code and making the operations more efficient.
