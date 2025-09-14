@@ -1,15 +1,16 @@
-function checkEligibility(age, isEmployed) {
-  if (age >= 18 && isEmployed) {
-    return "Eligible";
+function calculateTotalCost(price, qty, taxRate, discount) {
+  if (!price || !qty || !taxRate) {
+    return "Invalid input";
   }
-  if (age >= 18 && !isEmployed) {
-    return "Conditionally Eligible";
-  } else {
-    return "Not Eligible";
+
+  let totalCost = price * qty * (1 + taxRate);
+  if (discount) {
+    totalCost = totalCost - discount;
   }
+
+  return totalCost;
 }
 
-console.log(checkEligibility(22, true)); // 'Eligible'
-console.log(checkEligibility(16, true)); // 'Not Eligible'
-console.log(checkEligibility(45, false)); // 'Conditionally Eligible'
-console.log(checkEligibility(12, false)); // 'Not Eligible'
+console.log(calculateTotalCost(10, 2, 0.25)); // 25
+console.log(calculateTotalCost("a")); // 'Invalid input'
+console.log(calculateTotalCost(10, 2, 0.25, 1)); // 24
